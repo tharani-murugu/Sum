@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Calculator</h1>
+            <label>Enter the 1st Number : </label>
+            <input id="num1"><br>
+
+            <label>Enter the 2nd Number : </label>
+            <input id="num2"><br>
+
+            <label class="res">Result:</label>
+            <div class=space><p id="result"></p></div>
+           <br>
+            <button onclick="add()">Addition  </button>
+            <button onclick="sub()">Subtraction </button>
+            <button onclick="multy()">Multiplication</button>
+            <button onclick="divi()"> Division</button>
+            
+        </div>
+    </div>
+    <style>
+        .container{
+           background-color: blueviolet;
+           height: 100%;
+           width: 100%;
+           position: absolute;
+        }
+        .calculator{
+            background-color: white;
+            margin: 5%;
+            width: 50%;
+            padding: 2%;
+            text-align: center;
+        }
+        .calculator h1{
+            text-align: center;
+        }
+        .space{
+            border: 1px solid rgb(64, 64, 67); 
+            padding: 3px;
+            width: 180px;
+            justify-content: space-evenly;
+            background-color: rgb(252, 252, 252); 
+            margin-left: 20%;
+            display: inline-block;
+        }
+        .calculator input{
+            padding: 2px;
+            margin: 3px;
+        }
+        .calculator label{
+            font-size: 20px;
+        }
+        .res{
+            display: inline-block;
+            margin-left: 1%;
+            
+        }
+        .calculator button{
+            background-color: blue;
+            width: 20%;
+            height: 20%;
+            color: white;
+            font-weight: bold;
+            margin: 2%;
+           padding: 2%;
+           padding-right: 20%;
+           font-size: 19px;
+           border-color: blue;
+        }
+        
+    </style>
+    <script>
+        var a=document.getElementById("num1")
+        var b=document.getElementById("num2")
+        var r=document.getElementById("result")
+
+        //console.log(a.value)
+        //console.log(b.value)
+
+        function add(){
+        var box1value=Number(a.value)
+        var box2value=Number(b.value)
+        var total=box1value+box2value
+        result.textContent=total
+        }
+        function sub(){
+        var box1value=Number(a.value)
+        var box2value=Number(b.value)
+        var total=box1value-box2value
+        result.textContent=total
+        }
+        function multy(){
+        var box1value=Number(a.value)
+        var box2value=Number(b.value)
+        var total=box1value*box2value
+        result.textContent=total
+        }
+        function divi(){
+        var box1value=Number(a.value)
+        var box2value=Number(b.value)
+        var total=box1value/box2value
+        result.textContent=total
+        }
+       
+    </script>
+
+</body>
+</html>
